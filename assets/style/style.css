@@ -464,4 +464,33 @@ img:hover {
   flex-wrap: wrap;
   -moz-column-gap: 33px;
        column-gap: 33px;
+}
+
+@media screen and (min-width: 720px) {
+  .menu {
+    -moz-column-gap: 75px;
+         column-gap: 75px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu {
+    flex-wrap: nowrap;
+    -moz-column-gap: 105px;
+         column-gap: 105px;
+  }
+  .menu__item:nth-child(1) {
+    order: 1;
+  }
+  .menu__item:nth-child(2) {
+    order: 3;
+  }
+  .menu__item:nth-child(3) {
+    order: 4;
+  }
+  .menu__item:nth-child(4) {
+    order: 5;
+  }
+  .menu__item:nth-child(5) {
+    order: 2;
+  }
 }/*# sourceMappingURL=style.css.map */
