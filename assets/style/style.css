@@ -9,6 +9,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:wght@400;600&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -236,7 +238,6 @@ img:hover {
   background-color: #D9D9D9;
   width: 307px;
   padding-bottom: 1rem;
-  height: 318px;
 }
 .principal .eventos__item img {
   width: 100%;
@@ -263,7 +264,7 @@ img:hover {
   cursor: pointer;
   transition: 0.5s;
 }
-.principal .eventos button {
+.principal .eventos__btn, .principal .agenda .agenda__botao {
   outline: none;
   border: none;
   background-color: black;
@@ -273,7 +274,7 @@ img:hover {
   cursor: pointer;
   transition: 0.5s;
 }
-.principal .eventos button:hover {
+.principal .eventos__btn:hover, .principal .agenda .agenda__botao:hover {
   background-color: #FFC756;
 }
 .principal .agenda__titulo {
@@ -292,6 +293,7 @@ img:hover {
   color: white;
   text-transform: uppercase;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .principal .agenda__item .agenda__informacoes h3 {
   font-size: 2rem;
@@ -306,7 +308,6 @@ img:hover {
 .principal .agenda__item .agenda__atracao h6 {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 2rem;
 }
 .principal .agenda__item .agenda__atracao button {
   outline: none;
@@ -318,18 +319,19 @@ img:hover {
   cursor: pointer;
   transition: 0.5s;
 }
-.principal .agenda .agenda__botao button {
-  outline: none;
+.principal .agenda .agenda__botao {
+  /* outline: none;
   border: none;
   background-color: black;
   color: white;
-  padding: 0.75rem 0;
+  padding: .75rem 0;
   width: 148px;
   cursor: pointer;
-  transition: 0.5s;
-}
-.principal .agenda .agenda__botao button:hover {
-  background-color: #FFC756;
+  transition: .5s;
+
+  &:hover {
+      background-color: variables.$amarelo;
+  } */
 }
 
 /* Footer */
@@ -515,4 +517,135 @@ img:hover {
   .banner img:nth-child(4) {
     grid-area: 1/4/3/5;
   }
+}
+/*COLORS*/
+/*FONTS*/
+.categorias__lista {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.categorias .destaques {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.categorias .destaques__barra {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 720px) {
+  .categorias__lista {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .principal .categorias {
+    display: grid;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .principal .categorias__titulo {
+    grid-column: 1/3;
+    margin-bottom: 1.5rem;
+  }
+  .principal .categorias__lista {
+    grid-area: 2/1/4/2;
+  }
+  .principal .categorias .destaques {
+    padding-top: 0px;
+  }
+  .principal .categorias__imagem {
+    grid-area: 3/2/3/3;
+  }
+}
+/*COLORS*/
+/*FONTS*/
+.eventos, .agenda {
+  display: flex;
+  flex-direction: column;
+}
+.eventos__lista, .agenda__lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+.eventos__item, .agenda__item {
+  display: none;
+  max-width: 620px;
+  flex-grow: 1;
+}
+.eventos__item:nth-child(1), .eventos__item:nth-child(2), .eventos__item:nth-child(3), .eventos__item:nth-child(4), .agenda__item:nth-child(1), .agenda__item:nth-child(2), .agenda__item:nth-child(3), .agenda__item:nth-child(4) {
+  display: grid;
+}
+.eventos > button, .agenda > button {
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.eventos__item {
+  grid-template-areas: "imagem imagem" "nome nome" "data data" "local botao";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto repeat(2, 1fr) auto;
+}
+.eventos__item img {
+  grid-area: imagem;
+}
+.eventos__item h3 {
+  grid-area: nome;
+  margin-top: 1rem;
+}
+.eventos__item h4 {
+  grid-area: data;
+  align-self: center;
+}
+.eventos__item h5 {
+  grid-area: local;
+  align-self: flex-end;
+}
+.eventos__item button {
+  grid-area: botao;
+}
+
+.agenda__item img {
+  grid-column: 1/3;
+}
+.agenda__atracao {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  .eventos > button, .agenda > button {
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .principal .eventos__item, .principal .agenda__item {
+    width: 438px;
+    max-width: 670px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .principal .eventos__item, .principal .agenda__item {
+    display: grid;
+    width: 282px;
+  }
+}
+.rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rodape__logo {
+  align-self: flex-end;
 }/*# sourceMappingURL=style.css.map */

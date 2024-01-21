@@ -217,7 +217,6 @@ img:hover {
             background-color: variables.$cinza-claro;
             width: 307px;
             padding-bottom: 1rem;
-            height: 318px;
 
             img {
                 width: 100%;
@@ -250,7 +249,7 @@ img:hover {
             }
         }
     
-        button {
+        &__btn {
             outline: none;
             border: none;
             background-color: black;
@@ -288,6 +287,7 @@ img:hover {
                 color: white;
                 text-transform: uppercase;
                 padding-top: 1rem;
+                padding-bottom: 1rem;
 
                 h3 {
                     font-size: 2rem;
@@ -305,7 +305,6 @@ img:hover {
                 h6 {
                     font-size: 18px;
                     font-weight: 600;
-                    margin-bottom: 2rem;
                 }
 
                 button {
@@ -321,8 +320,10 @@ img:hover {
             }
         }
     
-        .agenda__botao button {
-            outline: none;
+        .agenda__botao {
+            @extend .eventos__btn; 
+            
+            /* outline: none;
             border: none;
             background-color: black;
             color: white;
@@ -333,7 +334,7 @@ img:hover {
 
             &:hover {
                 background-color: variables.$amarelo;
-            }
+            } */
         }
     }
 

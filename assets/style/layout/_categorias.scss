@@ -1,0 +1,55 @@
+@use '../abstract/variables';
+
+.categorias {
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+    }
+
+    .destaques {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &__barra {
+            flex-grow: 1;
+        }
+    }
+}
+
+@media screen and (min-width:720px) {
+    .categorias {
+        &__lista {
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            column-gap: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .principal {
+        .categorias {
+            display: grid;
+            column-gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            &__titulo {
+                grid-column: 1/3;
+                margin-bottom: 1.5rem;
+            }
+
+            &__lista {
+                grid-area: 2/1/4/2;
+            }
+
+            .destaques {
+                padding-top: 0px;
+            }
+
+            &__imagem {
+                grid-area: 3/2/3/3;
+            }
+        }
+    }
+}
