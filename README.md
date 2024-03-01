@@ -37,7 +37,10 @@ Projeto que busca por em prática todos os conhecimentos adquiridos de Flexbox e
 
 ### Desktop Layout
 
-**Width 1440px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-1440px.jpg
+**Width 1440px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-1440px.jpg <br>
+
+<br>
+
 **Width 1280px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-1280px.jpg
 
 ### Tablet Layout
@@ -50,10 +53,7 @@ Projeto que busca por em prática todos os conhecimentos adquiridos de Flexbox e
 
 ## Autor
 
-- Nome(s), redes e forma de contato. 
-- Talvez um breve resumo sobre cada um.
-
-Meu nome é **Alexandre Coelho**, sou autor deste ReadMe e estudante de Desenvolvimento Web. [Falar sobre meu papel no projeto, seu eu fiz tudo ou só modifiquei.
+Meu nome é **Alexandre Coelho**, sou autor deste ReadMe e estudante de Desenvolvimento Web. Esse projeto já tinha o HTML pronto e todo o curso foi focado no uso do CSS, monstrando momentos ideais para usar Flexbox ou Grid. Seu objetivo é alcançado com grande aprofundamento no conteúdo, por meio das instruções de [**Beatriz Moura**](https://github.com/beatrizmouradev) e [**Luan Alves**](https://github.com/luanalvesdev).
 
 Logo abaixo estão os meus principais links, fique a vontade de acessar o que mais lhe interessar:
 
