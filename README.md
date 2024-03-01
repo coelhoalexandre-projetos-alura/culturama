@@ -12,7 +12,6 @@
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Objetivos do Projeto](#objetivos-do-projeto)
-- [Funcionalidades do Projeto](#funcionalidades-do-projeto)
 - [Tecnologias Utilizadas](#tecnolgias-utilizadas)
 - [Layouts](#layouts)
   - [Desktop Layout](#desktop-layout)
@@ -23,29 +22,31 @@
 
 ## Sobre o Projeto
 
-
+Projeto que busca por em prática todos os conhecimentos adquiridos de Flexbox e Grid. Ele é o projeto do curso ["Praticando CSS: Grid e Flexbox"](https://cursos.alura.com.br/course/praticando-css-grid-flexbox), instruindo por [**Beatriz Moura**](https://github.com/beatrizmouradev) e [**Luan Alves**](https://github.com/luanalvesdev).
 
 ## Objetivos do Projeto
 
-
-
-## Funcionalidades do Projeto
-
-
+- Construir um projeto responsivo com Flexbox e Grid, com base no mobile-first.
 
 ## Tecnolgias Utilizadas
 
-
+1. HTML
+2. CSS
 
 ## Layouts
 
 ### Desktop Layout
 
+**Width 1440px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-1440px.jpg
+**Width 1280px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-1280px.jpg
+
 ### Tablet Layout
+
+**Width 768px:** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-768px.jpg
 
 ### Mobile Layout
 
-## Adaptações
+**Width 480px** https://github.com/coelhoalexandre/projetos-alura/blob/main/imagens/culturama-480px.jpg
 
 ## Autor
 
